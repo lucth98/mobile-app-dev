@@ -389,10 +389,6 @@ struct Pet {
     
 }
 
-//bis 5.) gemacht
-
-
-
 enum PetType{
      case dog
      case cat
@@ -409,6 +405,23 @@ enum PetType{
 
 var petType = PetType.cat
 print(petType.animalSound)
+
+let pet1 = Pet("Hund 1", PetType.dog)
+let pet2 = Pet("Hund 2", PetType.dog)
+let pet3 = Pet("Katze 1", PetType.cat)
+let pet4 = Pet("Katze 2", PetType.cat)
+let pet5 = Pet("Katze 3", PetType.cat)
+
+var petArray:[Pet] = [pet1, pet2, pet3, pet4, pet5]
+
+petArray[2].name = "snow" //6.) no it dos not chang in let becouse structs work with coy and not with references
+print(petArray[2].name )
+print(pet3.name )
+
+//7.) no becouse there are constant
+//pet3.name = "snow"   //-> gives an error
+
+//weiter ab 8.)
 //: ### Protocols and extensions
 //: 1. Create a protocol called `NamedThing`. Add a `get` variable of type `String`, with the name `name`.
 //: 1. Use extensions to make your `Person` class and `Pet` structs from above conform to the new protocol.
