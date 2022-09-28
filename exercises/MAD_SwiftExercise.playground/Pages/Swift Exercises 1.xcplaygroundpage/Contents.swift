@@ -422,6 +422,28 @@ print(pet3.name )
 //pet3.name = "snow"   //-> gives an error
 
 //weiter ab 8.)
+
+
+let student1 = Student("student 1", "a")
+let student2 = Student("student 2", "b")
+let student3 = Student("student 3", "c")
+
+var studentArray:[Student] = [student1,student2,student3]
+
+print(student1.name)
+studentArray[0].firstName = "Max mustermann "
+print(student1.name)
+//9.) Yes becous they are refences
+
+
+//10 it can be changed becous the constant is the reverence to an object not the obect
+student1.firstName=" new name"//works
+//student1 =student2// dont work becouse the reverence is constant
+
+print(student1.name)
+
+
+
 //: ### Protocols and extensions
 //: 1. Create a protocol called `NamedThing`. Add a `get` variable of type `String`, with the name `name`.
 //: 1. Use extensions to make your `Person` class and `Pet` structs from above conform to the new protocol.
